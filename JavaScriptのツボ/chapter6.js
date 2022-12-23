@@ -26,3 +26,40 @@ let card = [4,10,5,"K",7];
 let endIndex2 = card.indexOf("K");//Kの位置を取り出す
 let new_card = card.slice(0,endIndex2);//Kまでのカードを取り出す
 console.log(new_card)
+let ymd = [2021,3,1];   //2021年3月1日
+console.log(ymd.join("/")); //文字列に変換して出力
+
+//04日付オブジェクト
+new Date("2019-5-1");   //①2019年5月1日0時0分0秒
+new Date(2019,4,1);     //②2019年5月1日0時0分0秒　　配列の要素番号と同じで0から数える為、０が1月となる
+new Date(2019,4,1,9,3,0);//③2019年5月1日9時3分0秒
+
+new Date();//現在の日時
+
+// 日付オブジェクトの主要メソッド
+let now = new Date();//現在の日時オブジェクト
+console.log(now.getFullYear());//年(西暦)が出力される
+console.log(now.getMonth());//月が出力される
+console.log(now.getDate());//日が出力される
+console.log(now.getDay());//曜日(０を日曜とする0から6の数字)が出力される
+
+//上記を６か月先へ進める
+// now.setMonth(now.getMonth() + 6);
+// console.log(now.getFullYear());//年(西暦)が出力される
+// console.log(now.getMonth());//月が出力される(0を1月とし12月まで出力)
+// console.log(now.getDate());//日が出力される
+// console.log(now.getDay());//曜日(０を日曜とする0から6の数字)が出力される
+
+// 日付オブジェクトを文字列に変換
+console.log(now.toLocaleString());//日本語のブラウザでは、年/月/日　時：分：秒
+console.log(now.toLocaleDateString());//年/月/日
+console.log(now.toLocaleTimeString());//時:分:秒　　で出力される。
+
+//曜日を日月火水木金で表示
+
+let days = ["日","月","火","水","木","金","土"];//曜日の文字が入った配列を作成
+let now1 = new Date();//今日の日付オブジェクト
+console.log(days[now1.getDay()]+"曜日");//now1が何曜日かをgetDayに問い、その日の数値を返す（金曜なら５を返す）
+                                       //返された数値に対応した配列上の文字をdays[]に代入して出力する。
+
+
