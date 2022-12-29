@@ -62,4 +62,39 @@ let now1 = new Date();//今日の日付オブジェクト
 console.log(days[now1.getDay()]+"曜日");//now1が何曜日かをgetDayに問い、その日の数値を返す（金曜なら５を返す）
                                        //返された数値に対応した配列上の文字をdays[]に代入して出力する。
 
+// 05数字オブジェクト
+//円周の長さを求める関数（引数rは半径）
+function getEnsyu(r){
+    return 2 * r * Math.PI;// 2＊半径＊円周率
+}
+//円の面積を求める関数(引数rは半径)
+function getMenseki(r){
+    return r * r * Math.PI;//半径＊半径＊円周率
+}
 
+console.log("円周："+ getEnsyu(10)+"cm");
+console.log("面積："+ getMenseki(10)+"cm");
+
+//端数の処理、絶対値、最大値、最小値を求める
+//手持ちのカードの中で１番大きいカードを求める関数
+let myCard = [10,5,4];//手持ちのカード
+//配列要素の最大値を求める関数
+function getMax(card){
+    //どのカードよりも小さな変数を用意
+    let max = 0;
+    for(let i = 0; i<card.length; i++){
+    //配列要素とmaxの大きい方を新たなmaxとする
+    max = Math.max(max,card[i]);
+    }
+    return max;
+}
+console.log(getMax(myCard));
+
+
+
+//0~nの間の整数を返す関数
+function getRansu(n){
+    let ransu = Math.random()*(n+1);
+    return Math.floor(ransu);
+}
+console.log(getRansu(100));//0~100の乱数を出力
