@@ -1,3 +1,14 @@
+// // 01組み込みオブジェクト
+//   洗濯機オブジェクトを生成
+//   let sentaku = new WashingMachine(); 
+//   洗濯機オブジェクトのプロパティを出力
+//   console.log("メーカー:" + sentaku.maker);//メーカーA
+//   console.log("種類:" + sentaku.type);//全自動
+//   console.log("形状:" + sebtaku.shape);//縦型
+//   console.log("容量:" + sebtaku.capacity);//７.５キロ
+// 洗濯機オブジェクトのメソッドを実行
+//   sentaku.wash();//洗う
+
 // 02文字列オブジェクト
 //let message = new String("おはよう"); 方法１
 let message = "おはよう"// 方法２ よっぽどのことがない限りコッチ
@@ -98,3 +109,23 @@ function getRansu(n){
     return Math.floor(ransu);
 }
 console.log(getRansu(100));//0~100の乱数を出力
+
+//06 Windowオブジェクト
+//洗濯機クラスの定義
+class WashingMachine{
+//インスタンス初期化のための特別な関数
+constructor(maker,type,shape,capacity){
+    this.maker = maker;
+    this.type = type;
+    this.shape = shape;
+    this.capacitry = capacity;
+}
+//洗濯機クラスのメソッド
+wash(){
+    console.log("只今洗濯中");
+}
+}
+
+//メーカーAの洗濯機を生成して洗濯する
+const sentaku = new WashingMachine("メーカーA","全自動","縦型","7.5kg");
+sentaku.wash();//『只今洗濯中』が出力される
