@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+</head>
+
+<body>
+    
+<script>
+// javascriptでは、数値『0』または『−0』は真偽値に変換するとfalseになる
+//それ以外の数値は全て、何でもかんでもtrueになる。
+//true
+//  let x =5;
+//  if( x > 3){
+//     alert('xは3より大きいです');
+//  }else{
+//     alert('xは3より大きくないです');
+//  }
+
+// // データ型の変換
+// const num = 1;
+// console.log(num + '⇦これは数値の１です。');
+// console.log(typeof num);//number
+
+// const str = num.toString();//数値の１を文字列に変換したもの
+// console.log(str + '⇦これは数値の1を文字列に変換したものです');//文字列の１
+// console.log(typeof str);
+
+//false
+//  let x = 2;
+//  if( x > 3){//この式は正しくない　条件式を評価するとfalseである
+//     alert('xは3より大きいです');
+//  }else{
+//     alert('xは3より大きくないです');//こちらが実効される
+//  }
+
+// 制御構文　制御フロー
+
+//if文
+//省略
+
+//while文
+//無限ループに注意
+
+// let x = 0;
+// while(x < 100){
+//    x++ ;
+//    console.log(x);
+// }
+
+//for文
+let arrOnigiri = ['梅干し','ツナマヨ','明太子'];
+
+for(let i = 0; i< arrOnigiri.length; i++){ //大体この形
+   console.log(arrOnigiri[i]);
+}
+
+// ループ文の使い分け
+
+// 例１　1から100までを表示
+//for文の場合
+let x = 0
+for(let i =1;i <= 100; i++){
+   console.log(i);
+}
+//while文の場合
+// let x = 0;
+// while(x < 100){
+//    x++ ;
+//    console.log(x);
+// }
+
+</script>
+
+</body>
+
+</html>
