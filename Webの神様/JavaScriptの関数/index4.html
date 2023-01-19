@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+   <title>JavaScript関数</title>
+</head>
+
+<body>
+    
+<script>
+ 'use strict';
+
+//  function myAlert(){
+//     alert('こんにちは！');
+//     alert('webの神様です!');
+//  }
+
+//  myAlert();
+
+//引数
+// function myAlert(greeting){
+//     alert(greeting);
+//     alert('webの神様です!');
+//  }
+//  myAlert('おはよ！');
+//  myAlert('こんちは');
+//  myAlert('こんばんは〜〜！！！！！');
+
+// function myAlert(greeting,channelName){
+//     alert(greeting);
+//     alert(channelName+ 'です！');
+// }
+
+// myAlert('おはよ！','webの神様');
+// myAlert('こんばんは！','だいちゃんねる');
+
+//  function myAlert(greeting= 'ヤッホー！'){
+//     alert(greeting);
+//     alert('webの神様です!');
+//  }
+//  myAlert();
+
+// 戻り値
+// function myCalc(a,b){
+//     return a + b;
+// }
+// alert(myCalc(1,2));
+// alert(myCalc(3,4));
+
+// function myCalc(a,b){
+//     console.log(a + b);
+//     return a + b;//ここで処理が終わってしまうので注意　これ以降に書いても実行されない
+// }
+// alert(myCalc(1,2));
+// alert(myCalc(3,4));
+
+//無名関数
+//  const myAlert = function(){
+//     alert('こんちは！');
+//     alert('webの神様です!');
+//  }//関数式とも言う
+//  myAlert(); //()忘れない
+
+//  const myCalc = function(a,b){
+//     return a + b;
+//  }
+//  alert(myCalc(1,2)); 
+
+//アロー関数
+// const myAlert = () => {
+//     alert('こんちは！');
+//     alert('これはアロー関数です。');
+//  }
+//  myAlert(); 
+
+//従来の関数式
+//  const myAlert = function(){
+//     alert(message);
+//  }
+//  myAlert('こんちは！'); 
+
+// //アロー関数(省略前）
+//  const myAlert = (message)=>{
+//     alert(message);
+//  }
+//  myAlert('こんちは！');
+ 
+ //アロー関数(省略後)
+//  const myAlert = message => alert(message);
+//  myAlert('こんちは！');
+ 
+
+//戻り値ありの場合
+// 従来の関数式
+//  const myCalc = function(a){
+//     return a * a;
+//  }
+// alert(myCalc(2)); 
+
+//アロー関数(省略前）
+//  const myCalc = (a)=>{
+//     return a * a;
+//  }
+//  alert(myCalc(2));
+ 
+ //アロー関数(省略後)
+ const myCalc = a => a * a;
+ alert(myCalc(2));
+
+
+
+
+
+
+
+</script>
+     
+</body>
+
+</html>
