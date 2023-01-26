@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +19,15 @@
             <div v-bind:style="errorMessageStyle">
                 <ul>
                     <li v-for="item in items" v-bind:key="item.name">
-                        {{item.name}}: {{item.price}} × {{item.quantity}} = {{item.price * item.quantity | numberWithDelimiter}}円以上からご購入いただけます
+                        {{ item.name }}: {{ item.price }} × {{ item.quantity }} = {{ item.price * item.quantity | numberWithDelimiter}}円
                     </li>
                 </ul>
                 <p>小計: {{ totalPrice | numberWithDelimiter}}円</p>
                 <p>合計(税込): {{ totalPriceWithTax | numberWithDelimiter}}円</p>
-                <p v-show="!canbuy">
+                <p v-show="!canBuy">
                     小計{{10000 | numberWithDelimiter}}円以上からご購入いただけます。
                 </p>
-                <button v-bind:disabled="!canbuy" v-on:click="dobuy">購入</button>
+                <button v-bind:disabled="!canBuy" v-on:click="doBuy">購入</button>
             </div>
         </div>
         <script src="workout8.js"></script>

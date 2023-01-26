@@ -43,7 +43,7 @@ var vm = new Vue({
     computed: {
         // 小計金額
         totalPrice: function () {
-            return this.itepxms.reduce(function (sum, item) {
+            return this.items.reduce(function (sum, item) {
                 return sum + (item.price * item.quantity)
             }, 0)
         },
