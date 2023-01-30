@@ -24,7 +24,7 @@ var vm = new Vue({
     }, 
     filters: {
         //金額のフォーマット
-        numberWithDelimeter: function(value){
+        numberWithDelimiter: function(value){
             if(!value){
                 return '0'
             }

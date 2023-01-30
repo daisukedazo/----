@@ -27,7 +27,7 @@
                 <p v-show="!canBuy">
                 小計{{ 20000| numberWithDelimiter}}以上からご購入いただけます。
                 </p>
-                <button v-show:disabled="!canBuy" v-on:click="doBuy">購入</button>
+                <button v-bind:disabled="!canBuy" v-on:click="doBuy">購入</button>
             </div>
         </div>
         <script src="workout9.js"></script>
