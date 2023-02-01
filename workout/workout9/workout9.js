@@ -19,9 +19,9 @@ var items = [
 
 var vm = new Vue({
     el: '#app',
-    date:{
+    data:{
         items: items
-    }, 
+    },
     filters: {
         //金額のフォーマット
         numberWithDelimiter: function(value){
