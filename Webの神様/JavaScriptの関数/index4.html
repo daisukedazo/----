@@ -104,8 +104,22 @@
 //  alert(myCalc(2));
  
  //アロー関数(省略後)
- const myCalc = a => a * a;
- alert(myCalc(2));
+//  const myCalc = a => a * a;
+//  alert(myCalc(2));
+ const a = [1,2,3,4,5];
+
+let total = 0;
+
+function sum(a){
+    let x = a;
+    for(let i = 0; i<=a; i++){
+        x += i;
+    }
+    return x
+};
+total= sum(a);
+console.log("合計:"+ total)
+
 
 
 
